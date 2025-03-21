@@ -11,7 +11,6 @@ namespace Bank
         private List<Transaction> successfulTransactions;
         private List<Transaction> unsuccessfulTransactions;
 
-
         public Bank()
         {
             clients = new List<Client>();
@@ -19,6 +18,7 @@ namespace Bank
             successfulTransactions = new List<Transaction>();
             unsuccessfulTransactions = new List<Transaction>();
         }
+
         public void AddClient(Client client)
         {
             clients.Add(client);
@@ -33,26 +33,32 @@ namespace Bank
         {
             successfulTransactions.Add(transaction);
         }
+
         public void RemoveTransaction(Transaction transaction)
         {
             successfulTransactions.Remove(transaction);
         }
+
         public void AddUnsuccessfulTransaction(Transaction transaction)
         {
             unsuccessfulTransactions.Add(transaction);
         }
+
         public List<Client> GetClients()
         {
             return clients;
         }
+
         public List<Employee> GetEmployees()
         {
             return employees;
         }
+
         public List<Transaction> GetSuccessfulTransactions()
         {
             return successfulTransactions;
         }
+
         public List<Transaction> GetUnsuccessfulTransactions()
         {
             return unsuccessfulTransactions;
