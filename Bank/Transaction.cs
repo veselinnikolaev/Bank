@@ -16,6 +16,7 @@ namespace Bank
         {
             throw new ArgumentException("Invalid transaction information!");
         }
+
         public Transaction(string type, string client, string employee, string bankAccount, double money)
         {
             Type = type;
